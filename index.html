@@ -1,46 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Posts</title>
 
     <script src="https://kit.fontawesome.com/1e3be9b4ce.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 class="main-title">Social Posts</h1>
+    <h1 class="main-title">Social Posts</h1> <!-- TITOLO -->
 
-    <div id="container" class="posts-list">
+    <div id="container" class="posts-list"> <!-- QUI VERRA' RENDERIZZATA LA CARD -->
 
         <!-- post di esempio/template, da togliere/commentare e generare da JS -->
-        <div class="post">
-            <div class="post__header">
-                <div class="post-meta">                    
-                    <div class="post-meta__icon">
-                        <img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione">                    
+        <div class="post"> <!-- L'INTERO POST -->
+            <div class="post__header"> <!-- SOLO HEADER, QUINDI IMMAGINE, NOME E POST -->
+                <div class="post-meta"> <!-- DENTRO L'HEADER -->        
+                    <div class="post-meta__icon"> <!-- DIV IMMAGINE -->
+                        <img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione"> <!-- IMMAGINE DEL PROFILO -->                 
                     </div>
-                    <div class="post-meta__data">
-                        <div class="post-meta__author">Phil Mangione</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                    <div class="post-meta__data"> <!-- DIV NOME E TEMPO DI POST -->
+                        <div class="post-meta__author">Phil Mangione</div> <!-- NOME -->
+                        <div class="post-meta__time">4 mesi fa</div> <!-- TEMPO -->
                     </div>                    
                 </div>
             </div>
-            <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
-            <div class="post__image">
-                <img src="https://unsplash.it/600/300?image=171" alt="">
+            <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div> <!-- SCRITTE NEL POST -->
+            <div class="post__image"> <!-- DIV IMMAGINE POST -->
+                <img src="https://unsplash.it/600/300?image=171" alt=""> <!-- IMMAGINE POST -->
             </div>
-            <div class="post__footer">
-                <div class="likes js-likes">
-                    <div class="likes__cta">
+            <div class="post__footer"> <!-- DIV FOOTER CON MI PIACE E MI PIACE TOTALI -->
+                <div class="likes js-likes"> <!-- DIV FLEX MI PIACE E TOT MI PIACE -->
+                    <div class="likes__cta"> <!-- DIV MI PIACE -->
                         <a class="like-button  js-like-button" href="#" data-postid="1">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
                     </div>
-                    <div class="likes__counter">
+                    <div class="likes__counter"> <!-- DIV COUNTER MI PIACE -->
                         Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
                     </div>
                 </div> 
