@@ -65,3 +65,38 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+const containerPost = document.getElementById('container');
+
+posts.forEach(element => {
+    containerPost.innerHTML += `<div class="post"> <!-- L'INTERO POST -->
+            <div class="post__header"> <!-- SOLO HEADER, QUINDI IMMAGINE, NOME E POST -->
+                <div class="post-meta"> <!-- DENTRO L'HEADER -->        
+                    <div class="post-meta__icon"> <!-- DIV IMMAGINE -->
+                        <img class="profile-pic" src="${element.author.image}" alt="Phil Mangione"> <!-- IMMAGINE DEL PROFILO -->                 
+                    </div>
+                    <div class="post-meta__data"> <!-- DIV NOME E TEMPO DI POST -->
+                        <div class="post-meta__author">${element.author.name}</div> <!-- NOME -->
+                        <div class="post-meta__time">4 mesi fa</div> <!-- TEMPO -->
+                    </div>
+                </div>
+            </div>
+            <div class="post__text">${element.content}</div> <!-- SCRITTE NEL POST -->
+            <div class="post__image"> <!-- DIV IMMAGINE POST -->
+                <img src="${element.media}" alt=""> <!-- IMMAGINE POST -->
+            </div>
+            <div class="post__footer"> <!-- DIV FOOTER CON MI PIACE E MI PIACE TOTALI -->
+                <div class="likes js-likes"> <!-- DIV FLEX MI PIACE E TOT MI PIACE -->
+                    <div class="likes__cta"> <!-- DIV MI PIACE -->
+                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                            <span class="like-button__label">Mi Piace</span>
+                        </a>
+                    </div>
+                    <div class="likes__counter"> <!-- DIV COUNTER MI PIACE -->
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${element.likes}</b> persone
+                    </div>
+                </div> 
+            </div>            
+        </div>`
+});
